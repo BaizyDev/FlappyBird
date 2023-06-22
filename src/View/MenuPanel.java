@@ -1,14 +1,14 @@
 package View;
 
 import javax.imageio.ImageIO;
-import javax.swing.JButton;
-import javax.swing.JPanel;
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Image;
 import java.io.File;
 import java.awt.Graphics;
+import javax.swing.*;
 
 public class MenuPanel extends JPanel {
   private static final int WINDOW_HEIGHT = 800;
@@ -49,18 +49,27 @@ public class MenuPanel extends JPanel {
     add(bot, BorderLayout.SOUTH);
 
     startButton = new JButton("Start");
-    // ImageIcon startIcon = new ImageIcon(getClass().getResource("src/ressources/images/Background.png"));
-    // startButton.setIcon(startIcon);
+    ImageIcon startIcon = new ImageIcon("src/ressources/images/Start.png");
+    Image startImage = startIcon.getImage();
+    Image scaledImageStart = startImage.getScaledInstance(150, 50, Image.SCALE_SMOOTH);
+    ImageIcon scaledIconStart = new ImageIcon(scaledImageStart); 
+    startButton.setIcon(scaledIconStart); 
     startButton.setBounds(225, 75, 150, 50);
     
     scoreButton = new JButton("Score");
-    // ImageIcon scoreIcon = new ImageIcon(getClass().getResource("src/ressources/images/Score.jpg"));
-    // scoreButton.setIcon(scoreIcon);
+    ImageIcon scoreIcon = new ImageIcon("src/ressources/images/Score.jpg");
+    Image scoreImage = scoreIcon.getImage();
+    Image scaledImage = scoreImage.getScaledInstance(150, 50, Image.SCALE_SMOOTH);
+    ImageIcon scaledIconScore = new ImageIcon(scaledImage);    
+    scoreButton.setIcon(scaledIconScore);
     scoreButton.setBounds(225, 175, 150, 50);
 
     exitButton = new JButton("Exit");
-    // ImageIcon exitIcon = new ImageIcon(getClass().getResource("src/ressources/images/Exit.jpg"));
-    // exitButton.setIcon(exitIcon);
+    ImageIcon exitIcon = new ImageIcon("src/ressources/images/Exit.jpg");
+    Image exitImage = exitIcon.getImage();
+    Image scaledImageExit = exitImage.getScaledInstance(150, 50, Image.SCALE_SMOOTH);
+    ImageIcon scaledIconExit = new ImageIcon(scaledImageExit);    
+    exitButton.setIcon(scaledIconExit);
     exitButton.setBounds(225, 275, 150, 50);
     
     mid.add(startButton);

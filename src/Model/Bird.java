@@ -1,11 +1,6 @@
 package Model;
 
 import javax.imageio.ImageIO;
-import javax.swing.JButton;
-import javax.swing.JPanel;
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Image;
 import java.io.File;
 import java.awt.Graphics;
@@ -47,9 +42,9 @@ public class Bird {
   }
 
 
-@Override
-  protected void paintComponent(Graphics g){
-    super.paintComponent(g);
-    g.drawImage(birdImage, 0, 0, 50, 50, null);
-  }
+// @Override
+//   protected void paintComponent(Graphics g){
+//     super.paintComponent(g);
+//     g.drawImage(birdImage, 0, 0, 50, 50, null);
+//   }
 }
