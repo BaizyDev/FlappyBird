@@ -13,9 +13,9 @@ import java.awt.Graphics;
 public class MenuPanel extends JPanel {
   private static final int WINDOW_HEIGHT = 800;
   private static final int WINDOW_WIDTH = 600;
-  private JButton startButton;
-  private JButton exitButton;
-  private JButton scoreButton;
+  public JButton startButton;
+  public JButton exitButton;
+  public JButton scoreButton;
   private JPanel top;
   private JPanel mid;
   private JPanel bot;
