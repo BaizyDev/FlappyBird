@@ -1,8 +1,16 @@
 package Model;
 
-import java.awt.Graphics;
+import javax.imageio.ImageIO;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Image;
+import java.io.File;
+import java.awt.Graphics;
 import java.awt.Point;
+
 
 public class Bird {
   private int life;
@@ -10,7 +18,12 @@ public class Bird {
   private Image birdImage;
 
   public Bird(){
-    
+
+    try {
+      birdImage = ImageIO.read(new File("src/ressources/images/Bird.png"));
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
   }
 
 
@@ -31,5 +44,12 @@ public class Bird {
   }
 
   public void paint(Graphics g){
+  }
+
+
+@Override
+  protected void paintComponent(Graphics g){
+    super.paintComponent(g);
+    g.drawImage(birdImage, 0, 0, 50, 50, null);
   }
 }
