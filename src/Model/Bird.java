@@ -8,10 +8,9 @@ public class Bird {
   private int life;
   private Point coordinates;
   private Image birdImage;
-  private Image lifeImage;
 
   public Bird(){
-
+    
   }
 
 
