@@ -50,7 +50,7 @@ public class GameWindow extends JFrame {
 
   public void startGame(){
     gamePanel = new GamePanel(presenter);
-    presenter = new GamePresenter();
+    presenter = new GamePresenter(this);
     remove(menuPanel);
     add(gamePanel);
 

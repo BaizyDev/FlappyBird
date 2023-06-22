@@ -4,7 +4,9 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Point;
 
-public class Pipe {
+import javax.swing.JPanel;
+
+public class Pipe extends JPanel{
   private Point coordinates;
   private Image pipeImage;
 
@@ -20,7 +22,8 @@ public class Pipe {
     return coordinates;
   }
 
-  public void paint(Graphics g){
-
+  public void paintComponent(Graphics g){
+    super.paintComponent(g);
+    g.drawImage(pipeImage, 300, 400, 50, 50, null);
   }
 }

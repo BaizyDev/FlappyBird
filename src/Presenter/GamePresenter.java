@@ -14,15 +14,20 @@ public class GamePresenter {
 
   public GamePresenter(GameWindow gameWindow){
     this.window = gameWindow;
-    startGame();
   }
 
+  public void updateGame(){
 
-
-  public void startGame(){
-    bird.setCoordinates(300, 400);
   }
 
   public void drawBird(Graphics g){
+    bird.paintComponent(g);
   }
+
+  public void drawPipe(Graphics g){
+    topPipe.paintComponent(g);
+    botPipe.paintComponent(g);
+  }
+
+
 }

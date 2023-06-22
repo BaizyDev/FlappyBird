@@ -41,7 +41,7 @@ public class Bird extends JPanel{
   }
 
   @Override
-  public void paintComponent(Graphics g) {
+  public void draw(Graphics g) {
     super.paintComponent(g);
     g.drawImage(birdImage, 300, 400, 50, 50, null);
   }
