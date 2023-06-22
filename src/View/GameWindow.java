@@ -5,12 +5,15 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 
+import Presenter.GamePresenter;
+
 public class GameWindow extends JFrame {
 
   private static final int WINDOW_HEIGHT = 800;
   private static final int WINDOW_WIDTH = 600;
   private MenuPanel menuPanel;
   private GamePanel gamePanel;
+  private GamePresenter presenter;
 
   public GameWindow() {
     setVisible(true);
@@ -46,7 +49,8 @@ public class GameWindow extends JFrame {
   }
 
   public void startGame(){
-    gamePanel = new GamePanel();
+    gamePanel = new GamePanel(presenter);
+    presenter = new GamePresenter();
     remove(menuPanel);
     add(gamePanel);
 

@@ -5,9 +5,11 @@ import java.awt.Image;
 import java.io.File;
 import java.awt.Graphics;
 import java.awt.Point;
+import java.awt.*;
+import javax.swing.*;
 
 
-public class Bird {
+public class Bird extends JPanel{
   private int life;
   private Point coordinates;
   private Image birdImage;
@@ -38,13 +40,12 @@ public class Bird {
     return coordinates;
   }
 
-  public void paint(Graphics g){
+  @Override
+  public void paintComponent(Graphics g) {
+    super.paintComponent(g);
+    g.drawImage(birdImage, 300, 400, 50, 50, null);
   }
 
 
-// @Override
-//   protected void paintComponent(Graphics g){
-//     super.paintComponent(g);
-//     g.drawImage(birdImage, 0, 0, 50, 50, null);
-//   }
+
 }

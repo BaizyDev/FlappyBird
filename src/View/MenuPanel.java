@@ -51,7 +51,7 @@ public class MenuPanel extends JPanel {
     startButton = new JButton("Start");
     ImageIcon startIcon = new ImageIcon("src/ressources/images/Start.png");
     Image startImage = startIcon.getImage();
-    Image scaledImageStart = startImage.getScaledInstance(150, 50, Image.SCALE_SMOOTH);
+    Image scaledImageStart = startImage.getScaledInstance(160, 50, Image.SCALE_SMOOTH);
     ImageIcon scaledIconStart = new ImageIcon(scaledImageStart); 
     startButton.setIcon(scaledIconStart); 
     startButton.setBounds(225, 75, 150, 50);
@@ -59,7 +59,7 @@ public class MenuPanel extends JPanel {
     scoreButton = new JButton("Score");
     ImageIcon scoreIcon = new ImageIcon("src/ressources/images/Score.jpg");
     Image scoreImage = scoreIcon.getImage();
-    Image scaledImage = scoreImage.getScaledInstance(150, 50, Image.SCALE_SMOOTH);
+    Image scaledImage = scoreImage.getScaledInstance(160, 50, Image.SCALE_SMOOTH);
     ImageIcon scaledIconScore = new ImageIcon(scaledImage);    
     scoreButton.setIcon(scaledIconScore);
     scoreButton.setBounds(225, 175, 150, 50);
@@ -67,7 +67,7 @@ public class MenuPanel extends JPanel {
     exitButton = new JButton("Exit");
     ImageIcon exitIcon = new ImageIcon("src/ressources/images/Exit.jpg");
     Image exitImage = exitIcon.getImage();
-    Image scaledImageExit = exitImage.getScaledInstance(150, 50, Image.SCALE_SMOOTH);
+    Image scaledImageExit = exitImage.getScaledInstance(160, 50, Image.SCALE_SMOOTH);
     ImageIcon scaledIconExit = new ImageIcon(scaledImageExit);    
     exitButton.setIcon(scaledIconExit);
     exitButton.setBounds(225, 275, 150, 50);
