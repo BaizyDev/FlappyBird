@@ -1,10 +1,8 @@
 package View;
 
 import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
-
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -22,6 +20,7 @@ public class MenuPanel extends JPanel {
   private JPanel mid;
   private JPanel bot;
   private Image backgroundImage;
+  private Image logo;
 
   public MenuPanel() {
     setLayout(new BorderLayout());
@@ -38,7 +37,7 @@ public class MenuPanel extends JPanel {
     mid = new JPanel();
     mid.setBackground(Color.RED);
     mid.setPreferredSize(new Dimension(WINDOW_WIDTH, 400));
-    mid.setOpaque(true);
+    mid.setOpaque(false);
     mid.setLayout(null);
     add(mid, BorderLayout.CENTER);
 
@@ -49,20 +48,20 @@ public class MenuPanel extends JPanel {
     bot.setLayout(null);
     add(bot, BorderLayout.SOUTH);
 
-    startButton = new JButton();
+    startButton = new JButton("Start");
     // ImageIcon startIcon = new ImageIcon(getClass().getResource("src/ressources/images/Background.png"));
     // startButton.setIcon(startIcon);
-    startButton.setBounds(225, 50, 150, 50);
+    startButton.setBounds(225, 75, 150, 50);
     
-    scoreButton = new JButton();
+    scoreButton = new JButton("Score");
     // ImageIcon scoreIcon = new ImageIcon(getClass().getResource("src/ressources/images/Score.jpg"));
     // scoreButton.setIcon(scoreIcon);
-    scoreButton.setBounds(225, 150, 150, 50);
+    scoreButton.setBounds(225, 175, 150, 50);
 
-    exitButton = new JButton();
+    exitButton = new JButton("Exit");
     // ImageIcon exitIcon = new ImageIcon(getClass().getResource("src/ressources/images/Exit.jpg"));
     // exitButton.setIcon(exitIcon);
-    exitButton.setBounds(225, 250, 150, 50);
+    exitButton.setBounds(225, 275, 150, 50);
     
     mid.add(startButton);
     mid.add(exitButton);
@@ -73,11 +72,18 @@ public class MenuPanel extends JPanel {
     } catch (Exception e) {
       e.printStackTrace();
     }
+
+    try {
+      logo = ImageIO.read(new File ("src/ressources/images/Logo.png"));
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
   }
 
   @Override
   protected void paintComponent(Graphics g){
     super.paintComponent(g);
     g.drawImage(backgroundImage, 0, 0, WINDOW_WIDTH, WINDOW_HEIGHT, null);
+    g.drawImage(logo, 150, 25, 300, 200, top);
   }
 }

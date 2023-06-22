@@ -17,5 +17,9 @@ public class GameWindow extends JFrame {
 
     menuPanel = new MenuPanel();
     add(menuPanel);
+
+    
   }
+
+  
 }
