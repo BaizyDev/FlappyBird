@@ -21,7 +21,7 @@ public class GamePresenter {
   }
 
   public void drawBird(Graphics g){
-    bird.paintComponent(g);
+    // bird.paintComponent(g);
   }
 
   public void drawPipe(Graphics g){

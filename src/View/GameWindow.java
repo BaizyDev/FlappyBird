@@ -35,7 +35,7 @@ public class GameWindow extends JFrame {
     menuPanel.scoreButton.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent a){
-        
+
       }
     });
 

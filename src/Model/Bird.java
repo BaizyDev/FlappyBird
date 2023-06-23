@@ -40,11 +40,11 @@ public class Bird extends JPanel{
     return coordinates;
   }
 
-  @Override
-  public void draw(Graphics g) {
-    super.paintComponent(g);
-    g.drawImage(birdImage, 300, 400, 50, 50, null);
-  }
+  // @Override
+  // public void draw(Graphics g) {
+  //   super.paintComponent(g);
+  //   g.drawImage(birdImage, 300, 400, 50, 50, null);
+  // }
 
 
 
