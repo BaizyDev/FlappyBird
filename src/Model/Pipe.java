@@ -6,11 +6,14 @@ import java.awt.Point;
 
 import javax.swing.JPanel;
 
-public class Pipe extends JPanel{
+public class Pipe extends GameObject{
+  private static int SCREEN_WIDTH = 800;  // Die Breite des Spielfelds
+  private static int SCREEN_HEIGHT = 600;
   private Point coordinates;
   private Image pipeImage;
+  private boolean isVisible;
 
-  public Pipe(){
+  public Pipe(int x, int y, int width, int height){
 
   }
 
@@ -22,8 +25,18 @@ public class Pipe extends JPanel{
     return coordinates;
   }
 
-  public void paintComponent(Graphics g){
-    super.paintComponent(g);
+
+  public void update(){
+    if((x + width) < 1 || x < 800){
+      isVisible = true;
+    }else{
+      isVisible = false;
+    }
+  }
+
+    
+  @Override
+  public void draw(Graphics g){
     g.drawImage(pipeImage, 300, 400, 50, 50, null);
   }
 }

@@ -9,12 +9,15 @@ import java.awt.*;
 import javax.swing.*;
 
 
-public class Bird extends JPanel{
+public class Bird extends GameObject{
+  private static int SCREEN_WIDTH = 800;  // Die Breite des Spielfelds
+  private static int SCREEN_HEIGHT = 600;
   private int life;
   private Point coordinates;
   private Image birdImage;
+  private boolean isInCenter;
 
-  public Bird(){
+  public Bird(int x, int y, int width, int height){
 
     try {
       birdImage = ImageIO.read(new File("src/ressources/images/Bird.png"));
@@ -40,11 +43,20 @@ public class Bird extends JPanel{
     return coordinates;
   }
 
-  // @Override
-  // public void draw(Graphics g) {
-  //   super.paintComponent(g);
-  //   g.drawImage(birdImage, 300, 400, 50, 50, null);
-  // }
+  public void update(){
+    if(x < SCREEN_WIDTH / 2){
+      isInCenter = true;
+    }else{
+      isInCenter = false;
+    }
+  }
+
+  
+
+  @Override
+  public void draw(Graphics g) {
+    g.drawImage(birdImage, 300, 400, 50, 50, null);
+  }
 
 
 

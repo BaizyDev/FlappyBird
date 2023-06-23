@@ -22,41 +22,45 @@ public class GameWindow extends JFrame {
     setLocationRelativeTo(null);
     setTitle("Flappy Bird");
 
-    menuPanel = new MenuPanel();
-    add(menuPanel);
-    
-    menuPanel.startButton.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent a){
-        startGame();
-      }
-    });
-
-    menuPanel.scoreButton.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent a){
-
-      }
-    });
-
-    menuPanel.exitButton.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent a){
-        System.exit(0);
-      }
-    });
-    
-  }
-
-  public void startGame(){
     gamePanel = new GamePanel(presenter);
     presenter = new GamePresenter(this);
-    remove(menuPanel);
     add(gamePanel);
 
-    gamePanel.requestFocus();
-    revalidate();
-  }
+  //   menuPanel = new MenuPanel();
+  //   add(menuPanel);
+    
+  //   menuPanel.startButton.addActionListener(new ActionListener() {
+  //     @Override
+  //     public void actionPerformed(ActionEvent a){
+  //       startGame();
+  //     }
+  //   });
+
+  //   menuPanel.scoreButton.addActionListener(new ActionListener() {
+  //     @Override
+  //     public void actionPerformed(ActionEvent a){
+
+  //     }
+  //   });
+
+  //   menuPanel.exitButton.addActionListener(new ActionListener() {
+  //     @Override
+  //     public void actionPerformed(ActionEvent a){
+  //       System.exit(0);
+  //     }
+  //   });
+    
+   }
+
+  // public void startGame(){
+  //   gamePanel = new GamePanel(presenter);
+  //   presenter = new GamePresenter(this);
+  //   remove(menuPanel);
+  //   add(gamePanel);
+
+  //   gamePanel.requestFocus();
+  //   revalidate();
+  // }
 
 
 }
