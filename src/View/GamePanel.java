@@ -33,5 +33,7 @@ public class GamePanel extends JPanel{
   protected void paintComponent(Graphics g){
     super.paintComponent(g);
     g.drawImage(backgroundImage, 0, 0, WINDOW_WIDTH, WINDOW_HEIGHT, null);
+    presenter.drawBird(g); // Vogel zeichnen
+    presenter.drawPipe(g); // Rohre zeichnen
   }
 }

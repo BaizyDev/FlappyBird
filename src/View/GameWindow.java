@@ -1,11 +1,10 @@
 package View;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 
 import Presenter.GamePresenter;
+
 
 public class GameWindow extends JFrame {
 
@@ -22,8 +21,8 @@ public class GameWindow extends JFrame {
     setLocationRelativeTo(null);
     setTitle("Flappy Bird");
 
-    gamePanel = new GamePanel(presenter);
     presenter = new GamePresenter(this);
+    gamePanel = new GamePanel(presenter);
     add(gamePanel);
 
   //   menuPanel = new MenuPanel();
@@ -61,6 +60,4 @@ public class GameWindow extends JFrame {
   //   gamePanel.requestFocus();
   //   revalidate();
   // }
-
-
 }

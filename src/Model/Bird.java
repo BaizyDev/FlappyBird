@@ -18,14 +18,13 @@ public class Bird extends GameObject{
   private boolean isInCenter;
 
   public Bird(int x, int y, int width, int height){
-
+    super(x, y, width, height);
     try {
       birdImage = ImageIO.read(new File("src/ressources/images/Bird.png"));
     } catch (Exception e) {
       e.printStackTrace();
     }
   }
-
 
   public int getLife(){
     return life;
@@ -50,14 +49,8 @@ public class Bird extends GameObject{
       isInCenter = false;
     }
   }
-
-  
-
   @Override
   public void draw(Graphics g) {
-    g.drawImage(birdImage, 300, 400, 50, 50, null);
+    g.drawImage(birdImage, x, y, width, height, null);
   }
-
-
-
 }
